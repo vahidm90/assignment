@@ -1,14 +1,14 @@
 import {createBrowserRouter} from "react-router-dom";
-import App from "../App.tsx";
 import {getCategoryItemIds, getItemDetails} from "../services";
 import {ItemCategoryEnum} from "../enums";
 import {routeParams} from "./route-params.ts";
 import {ListPage} from "../pages/ListPage/ListPage.tsx";
+import {HomePage} from "../pages/HomePage/HomePage.tsx";
 
 export const routerConfig = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <HomePage />,
         children: [
             {
                 path: `lists/:${routeParams.categoryName}`,
